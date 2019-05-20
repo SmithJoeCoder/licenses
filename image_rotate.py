@@ -11,7 +11,5 @@ for i in all_data:
     M = cv2.getRotationMatrix2D((cols/2, rows/2), 10, 1)
     result = cv2.warpAffine(image, M, (cols, rows))
     filename = i.split("\\")[1].split(".")[0]
-    cv2.resizeWindow('Averaged', 94, 24)
-    cv2.imshow("result", result)
-    cv2.imwrite("temp/" + filename + "_bilateral5" + ".jpg", blurred_5)
-    cv2.waitKey()
+
+    cv2.imwrite("temp/" + filename + "_rotate" + ".jpg", result)
