@@ -23,7 +23,7 @@ for i in all_data:
 
     # cv.imshow("Bilateral", blurred)
 
-    cv.waitKey(0)
+    # cv.waitKey(0)
     filename = i.split("\\")[1].split(".")[0]
     # cv.imshow("result", blurred)
     # cv.waitKey()
