@@ -7,9 +7,9 @@ all_data = glob.glob("temp/*.jpg")
 for i in all_data:
     src = cv.imread(i)
 
-    blurred_5 = np.hstack([cv.bilateralFilter(src, 9, 41, 41)])
-    blurred_7 = np.hstack([cv.bilateralFilter(src, 9, 41, 41)])
-    blurred_9 = np.hstack([cv.bilateralFilter(src, 9, 41, 41)])
+    blurred5 = np.hstack([cv.bilateralFilter(src, 9, 41, 41)])
+    blurred7 = np.hstack([cv.bilateralFilter(src, 9, 41, 41)])
+    blurred9 = np.hstack([cv.bilateralFilter(src, 9, 41, 41)])
 
     # cv2.bilateralFilter(src, 5, 21, 21),
     #
@@ -28,6 +28,6 @@ for i in all_data:
     # cv.imshow("result", blurred)
     # cv.waitKey()
     if not os.path.exists("temp/" + filename + "_bilateral9" + ".jpg"):
-        cv.imwrite("temp/" + filename + "_bilateral5" + ".jpg", blurred_5)
-        cv.imwrite("temp/" + filename + "_bilateral7" + ".jpg", blurred_7)
-        cv.imwrite("temp/" + filename + "_bilateral9" + ".jpg", blurred_9)
+        cv.imwrite("temp/" + filename + "_bilateral5" + ".jpg", blurred5)
+        cv.imwrite("temp/" + filename + "_bilateral7" + ".jpg", blurred7)
+        cv.imwrite("temp/" + filename + "_bilateral9" + ".jpg", blurred9)
